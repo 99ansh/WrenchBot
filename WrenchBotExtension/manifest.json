@@ -1,0 +1,23 @@
+{
+  "name": "WrenchBot",
+  "version": "1.0",
+  "description":"Wrench's first chatbot :)",
+  "permissions": ["activeTab","declarativeContent", "http://dev.wrench.com/"],
+  "content_scripts":[
+	{
+		"matches":["http://dev.wrench.com/*"],
+		"run_at":"document_idle",
+		"all_frames":true,
+    "js":["jquery.min.js","contentScript.js"],
+    "css":["style.css"]
+	}	
+  ],
+ "icons": {
+  "16": "images/wrench-logo-16.png",
+  "32": "images/wrench-logo-32.png",
+  "48": "images/wrench-logo-48.png",
+  "128": "images/wrench-logo-128.png"
+  },
+  "web_accessible_resources": ["user-logo.png","bot-logo.png"],
+  "manifest_version": 2
+}
